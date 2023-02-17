@@ -10,6 +10,14 @@ body {
 }
 a {
     color: #39f;
+    border: 1px solid #39f;
+    padding: 2px 8px;
+    border-radius: 16px;
+    background-color: #fffd;
+    text-decoration: none;
+}
+a:hover {
+    background-color: #fffe;
 }
 p {
     padding: 8px 16px;
@@ -17,15 +25,49 @@ p {
 h1, h2 {
     margin: 0;
 }
+h1::before {
+    content: "*** ";
+}
+h1::after {
+    content: " ***";
+}
+h1::before, h1::after {
+    color: #aaa;
+    font-size: 75%;
+}
+h2::first-letter {
+    color: #fff;
+}
 h1, h2, h3, h4 {
     color: #ccddff;
     background-color: #024;
     border-bottom: 4px solid #39f;
     padding: 8px 16px;
+    text-align: center;
 }
 ul, ol {
     padding-bottom: 16px;
 }
+
+.flex-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.flex-list li {
+    display: inline-block;
+}
+
+.example {
+    color: darkgray; 
+    text-decoration: line-through;
+    order: 999;
+}
+
 .header {
     background-color: #002848;
     margin: 0;
@@ -34,6 +76,18 @@ ul, ol {
 
 .content {
     background-color: #036;
+    text-align: center;
+}
+
+.kova {
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    background-image: url('kova.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    border: 4px solid #dd4a68;
 }
 
 .sunset {
@@ -53,4 +107,66 @@ ul, ol {
     margin-top: 100px;
     border: none;
     background-color: #00000066;
+}
+
+.tube {
+    text-align: center;
+}
+
+.tube iframe {
+    margin: 16px auto;
+    border: 2px solid #39f;
+    border-radius: 32px;
+    max-width: 90%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.courses {
+    background-color: #ccc;
+    color: #024;
+    padding: 32px 0;
+    overflow-x: auto;
+}
+
+.courses table {
+    margin: 0 auto;
+    border: 1px solid #abc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    min-width: 600px;
+}
+
+.courses table th, .courses table td {
+    border-bottom: 1px solid #fff;
+    padding: 4px 8px;
+}
+
+.courses tr:last-child th, tr:last-child td {
+    border-bottom: 1px solid #abc !important;
+}
+
+.courses table caption {
+    font-size: 150%;
+    font-weight: 600;
+    color: #036;
+}
+
+.courses tr:hover:not(:first-child) {
+    background-color: #eee;
+}
+
+.courses tr:first-child {
+    background-color: #369;
+    color: #ccddff;
+}
+
+.courses tr:nth-child(even) {
+    background-color: #abc;
 }
