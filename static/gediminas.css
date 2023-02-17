@@ -56,3 +56,13 @@ hr {
   border: none;
   border-bottom: 2px solid rgba(127, 127, 127, 0.5);
 }
+
+.tube {
+  text-align: center;
+}
+
+.tube iframe {
+  margin: 16px auto;
+  border: 2px solid #39f;
+  border-radius: 32px;
+}
